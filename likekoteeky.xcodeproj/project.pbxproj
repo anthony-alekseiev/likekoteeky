@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		AC92FD58284B432200A4D576 /* likekoteekyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD57284B432200A4D576 /* likekoteekyApp.swift */; };
-		AC92FD5A284B432200A4D576 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD59284B432200A4D576 /* ContentView.swift */; };
+		AC92FD5A284B432200A4D576 /* CatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD59284B432200A4D576 /* CatsListView.swift */; };
 		AC92FD5C284B432300A4D576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC92FD5B284B432300A4D576 /* Assets.xcassets */; };
 		AC92FD5F284B432300A4D576 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC92FD5E284B432300A4D576 /* Preview Assets.xcassets */; };
 		AC92FD69284B432400A4D576 /* likekoteekyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD68284B432400A4D576 /* likekoteekyTests.swift */; };
 		AC92FD73284B432400A4D576 /* likekoteekyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD72284B432400A4D576 /* likekoteekyUITests.swift */; };
 		AC92FD75284B432400A4D576 /* likekoteekyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD74284B432400A4D576 /* likekoteekyUITestsLaunchTests.swift */; };
+		AC92FD82284B5B8B00A4D576 /* AppEnv.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD81284B5B8B00A4D576 /* AppEnv.swift */; };
+		AC92FD85284B67A900A4D576 /* CatsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD84284B67A900A4D576 /* CatsListViewModel.swift */; };
+		AC92FD87284B734B00A4D576 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD86284B734B00A4D576 /* Cat.swift */; };
+		AC92FD8E284B741B00A4D576 /* CatListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD8D284B741B00A4D576 /* CatListRow.swift */; };
+		AC92FD98284B814400A4D576 /* CatListDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD97284B814400A4D576 /* CatListDisplayItem.swift */; };
+		AC92FD9C284B852A00A4D576 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD9B284B852A00A4D576 /* ImageLoader.swift */; };
+		AC92FD9E284B85CA00A4D576 /* LoadedCatImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD9D284B85CA00A4D576 /* LoadedCatImage.swift */; };
+		AC92FDA0284B861F00A4D576 /* LikeKoteekyImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FD9F284B861F00A4D576 /* LikeKoteekyImageLoader.swift */; };
+		AC92FDA2284B90ED00A4D576 /* FakeImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FDA1284B90ED00A4D576 /* FakeImageLoader.swift */; };
+		AC92FDA5284BC31000A4D576 /* View+Stacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FDA4284BC31000A4D576 /* View+Stacked.swift */; };
+		AC92FDA7284BC50C00A4D576 /* CardsStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC92FDA6284BC50C00A4D576 /* CardsStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +47,7 @@
 /* Begin PBXFileReference section */
 		AC92FD54284B432200A4D576 /* likekoteeky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = likekoteeky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC92FD57284B432200A4D576 /* likekoteekyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likekoteekyApp.swift; sourceTree = "<group>"; };
-		AC92FD59284B432200A4D576 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AC92FD59284B432200A4D576 /* CatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListView.swift; sourceTree = "<group>"; };
 		AC92FD5B284B432300A4D576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC92FD5E284B432300A4D576 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC92FD64284B432400A4D576 /* likekoteekyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = likekoteekyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +55,17 @@
 		AC92FD6E284B432400A4D576 /* likekoteekyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = likekoteekyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC92FD72284B432400A4D576 /* likekoteekyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likekoteekyUITests.swift; sourceTree = "<group>"; };
 		AC92FD74284B432400A4D576 /* likekoteekyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likekoteekyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC92FD81284B5B8B00A4D576 /* AppEnv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnv.swift; sourceTree = "<group>"; };
+		AC92FD84284B67A900A4D576 /* CatsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsListViewModel.swift; sourceTree = "<group>"; };
+		AC92FD86284B734B00A4D576 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		AC92FD8D284B741B00A4D576 /* CatListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListRow.swift; sourceTree = "<group>"; };
+		AC92FD97284B814400A4D576 /* CatListDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListDisplayItem.swift; sourceTree = "<group>"; };
+		AC92FD9B284B852A00A4D576 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		AC92FD9D284B85CA00A4D576 /* LoadedCatImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedCatImage.swift; sourceTree = "<group>"; };
+		AC92FD9F284B861F00A4D576 /* LikeKoteekyImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeKoteekyImageLoader.swift; sourceTree = "<group>"; };
+		AC92FDA1284B90ED00A4D576 /* FakeImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeImageLoader.swift; sourceTree = "<group>"; };
+		AC92FDA4284BC31000A4D576 /* View+Stacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Stacked.swift"; sourceTree = "<group>"; };
+		AC92FDA6284BC50C00A4D576 /* CardsStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +116,13 @@
 		AC92FD56284B432200A4D576 /* likekoteeky */ = {
 			isa = PBXGroup;
 			children = (
-				AC92FD57284B432200A4D576 /* likekoteekyApp.swift */,
-				AC92FD59284B432200A4D576 /* ContentView.swift */,
+				AC92FD8A284B738D00A4D576 /* Infrastructure */,
+				AC92FD88284B735300A4D576 /* Domain */,
+				AC92FD8B284B73C600A4D576 /* Presentation */,
 				AC92FD5B284B432300A4D576 /* Assets.xcassets */,
 				AC92FD5D284B432300A4D576 /* Preview Content */,
+				AC92FD57284B432200A4D576 /* likekoteekyApp.swift */,
+				AC92FD81284B5B8B00A4D576 /* AppEnv.swift */,
 			);
 			path = likekoteeky;
 			sourceTree = "<group>";
@@ -125,6 +150,86 @@
 				AC92FD74284B432400A4D576 /* likekoteekyUITestsLaunchTests.swift */,
 			);
 			path = likekoteekyUITests;
+			sourceTree = "<group>";
+		};
+		AC92FD83284B679A00A4D576 /* CatsListView */ = {
+			isa = PBXGroup;
+			children = (
+				AC92FD8C284B73FF00A4D576 /* Custom Views */,
+				AC92FD59284B432200A4D576 /* CatsListView.swift */,
+				AC92FD84284B67A900A4D576 /* CatsListViewModel.swift */,
+				AC92FD97284B814400A4D576 /* CatListDisplayItem.swift */,
+			);
+			path = CatsListView;
+			sourceTree = "<group>";
+		};
+		AC92FD88284B735300A4D576 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AC92FD89284B736100A4D576 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AC92FD89284B736100A4D576 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC92FD86284B734B00A4D576 /* Cat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC92FD8A284B738D00A4D576 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				AC92FD9A284B851900A4D576 /* Image Loader */,
+				AC92FD99284B850C00A4D576 /* Cats API */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		AC92FD8B284B73C600A4D576 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AC92FDA3284BC2FE00A4D576 /* UI Extensions */,
+				AC92FD83284B679A00A4D576 /* CatsListView */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		AC92FD8C284B73FF00A4D576 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC92FD8D284B741B00A4D576 /* CatListRow.swift */,
+				AC92FDA6284BC50C00A4D576 /* CardsStack.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		AC92FD99284B850C00A4D576 /* Cats API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Cats API";
+			sourceTree = "<group>";
+		};
+		AC92FD9A284B851900A4D576 /* Image Loader */ = {
+			isa = PBXGroup;
+			children = (
+				AC92FD9B284B852A00A4D576 /* ImageLoader.swift */,
+				AC92FD9D284B85CA00A4D576 /* LoadedCatImage.swift */,
+				AC92FD9F284B861F00A4D576 /* LikeKoteekyImageLoader.swift */,
+				AC92FDA1284B90ED00A4D576 /* FakeImageLoader.swift */,
+			);
+			path = "Image Loader";
+			sourceTree = "<group>";
+		};
+		AC92FDA3284BC2FE00A4D576 /* UI Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC92FDA4284BC31000A4D576 /* View+Stacked.swift */,
+			);
+			path = "UI Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +362,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC92FD5A284B432200A4D576 /* ContentView.swift in Sources */,
+				AC92FDA2284B90ED00A4D576 /* FakeImageLoader.swift in Sources */,
+				AC92FD5A284B432200A4D576 /* CatsListView.swift in Sources */,
+				AC92FD85284B67A900A4D576 /* CatsListViewModel.swift in Sources */,
+				AC92FD98284B814400A4D576 /* CatListDisplayItem.swift in Sources */,
+				AC92FD9E284B85CA00A4D576 /* LoadedCatImage.swift in Sources */,
+				AC92FDA0284B861F00A4D576 /* LikeKoteekyImageLoader.swift in Sources */,
+				AC92FDA7284BC50C00A4D576 /* CardsStack.swift in Sources */,
+				AC92FDA5284BC31000A4D576 /* View+Stacked.swift in Sources */,
+				AC92FD87284B734B00A4D576 /* Cat.swift in Sources */,
+				AC92FD8E284B741B00A4D576 /* CatListRow.swift in Sources */,
 				AC92FD58284B432200A4D576 /* likekoteekyApp.swift in Sources */,
+				AC92FD9C284B852A00A4D576 /* ImageLoader.swift in Sources */,
+				AC92FD82284B5B8B00A4D576 /* AppEnv.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

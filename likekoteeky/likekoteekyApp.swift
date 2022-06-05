@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct likekoteekyApp: App {
+    
     var body: some Scene {
+        let imageLoader: ImageLoader = LikeKoteekyImageLoader()
+        let catListViewModel = CatsListViewModel(imageLoader: imageLoader)
+        
         WindowGroup {
-            ContentView()
+            CatsListView(
+                viewModel: catListViewModel
+            )
         }
     }
 }
