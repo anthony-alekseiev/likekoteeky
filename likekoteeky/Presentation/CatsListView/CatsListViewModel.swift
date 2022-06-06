@@ -16,8 +16,10 @@ class CatsListViewModel: ObservableObject {
     private var subscriptions = [AnyCancellable]()
     
     let imageLoader: ImageLoader
-    init(imageLoader: ImageLoader) {
+    let catsService: CatsService
+    init(imageLoader: ImageLoader, catsService: CatsService) {
         self.imageLoader = imageLoader
+        self.catsService = catsService
     }
     
     private func reloadCatItems(with newCats: [Cat]) {
@@ -42,19 +44,22 @@ class CatsListViewModel: ObservableObject {
     }
     
     func fetchCats() {
-        let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=10&page=0&order=desc&size=med")!
-        var urlRequest = URLRequest(url: url)
-        urlRequest.addValue(kLikekoteekyApiToken, forHTTPHeaderField: "x-api-key")
-        URLSession.shared
-            .dataTaskPublisher(for: urlRequest)
-            .print("network call")
-            .map(\.data)
-            .decode(type: [Cat].self, decoder: JSONDecoder())
+        let request = SearchCatsRequest(
+            limit: 10,
+            page: 0,
+            order: .desc,
+            size: .med
+        )
+        catsService.getCats(request: request)
+            .map {
+                $0.map { Cat(id: $0.id, url: $0.url) }
+            }
             .receive(on: DispatchQueue.main)
-            .replaceError(with: [])
-            .eraseToAnyPublisher()
-            .sink(receiveValue: { [weak self] cats in
-                self?.reloadCatItems(with: cats)
-            }).store(in: &subscriptions)
+            .sink { completion in
+                // TODO: - Handle error
+            } receiveValue: { [weak self] value in
+                self?.reloadCatItems(with: value)
+            }
+            .store(in: &subscriptions)
     }
 }
