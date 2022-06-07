@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol CatsService {
-    func getCats(request: SearchCatsRequest) -> AnyPublisher<[SearchCatsResponse], CatsServiceError>
+    func getCats(request: SearchCatsRequest) -> AnyPublisher<SearchCatsResponse, CatsServiceError>
 }

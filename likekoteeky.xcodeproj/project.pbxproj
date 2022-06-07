@@ -203,6 +203,7 @@
 		AC92FD8B284B73C600A4D576 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				ACC1CF08284FE4530005DD8A /* Random cats */,
 				AC92FDA3284BC2FE00A4D576 /* UI Extensions */,
 				AC92FD83284B679A00A4D576 /* CatsListView */,
 			);
@@ -264,6 +265,13 @@
 				ACA55C86284E92DF003AFAFE /* SearchCats.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ACC1CF08284FE4530005DD8A /* Random cats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Random cats";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -9,14 +9,14 @@ import Foundation
 import Combine
 
 class FakeCatsService: CatsService {
-    let publisher = PassthroughSubject<[SearchCatsResponse], CatsServiceError>()
-    var response = [SearchCatsResponse]()
+    let publisher = PassthroughSubject<SearchCatsResponse, CatsServiceError>()
+    var response = SearchCatsResponse()
     
-    init(response: [SearchCatsResponse]) {
+    init(response: SearchCatsResponse) {
         self.response = response
     }
     
-    func getCats(request: SearchCatsRequest) -> AnyPublisher<[SearchCatsResponse], CatsServiceError> {
+    func getCats(request: SearchCatsRequest) -> AnyPublisher<SearchCatsResponse, CatsServiceError> {
         publisher.send(response)
         return publisher.eraseToAnyPublisher()
     }

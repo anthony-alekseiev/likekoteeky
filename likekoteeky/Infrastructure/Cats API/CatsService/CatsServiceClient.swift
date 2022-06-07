@@ -35,7 +35,7 @@ class CatsServiceClient {
 }
 
 extension CatsServiceClient: CatsService {
-    func getCats(request: SearchCatsRequest) -> AnyPublisher<[SearchCatsResponse], CatsServiceError> {
+    func getCats(request: SearchCatsRequest) -> AnyPublisher<SearchCatsResponse, CatsServiceError> {
         let request = CatsServiceRequest.searchImages(params: request).urlRequest
         return wrappedRequest(urlRequest: request)
     }

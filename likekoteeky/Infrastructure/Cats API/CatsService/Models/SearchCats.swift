@@ -27,7 +27,9 @@ struct SearchCatsRequest {
     let size: Size
 }
 
-struct SearchCatsResponse: Codable {
+typealias SearchCatsResponse = [SearchCatsResponseCat]
+
+struct SearchCatsResponseCat: Codable {
     var id: String
     var url: URL
 }
