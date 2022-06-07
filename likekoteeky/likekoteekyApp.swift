@@ -18,10 +18,13 @@ struct likekoteekyApp: App {
             catsService: catsService
         )
         
+        let breedsViewModel = BreedsViewModel()
+        
         WindowGroup {
-            CatsListView(
-                viewModel: catListViewModel
-            )
+//            CatsListView(
+//                viewModel: catListViewModel
+//            )
+            BreedsView(viewModel: breedsViewModel)
         }
     }
 }

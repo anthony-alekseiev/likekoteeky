@@ -31,6 +31,9 @@
 		ACA55C84284E9031003AFAFE /* CatsServiceReuqest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA55C83284E9031003AFAFE /* CatsServiceReuqest.swift */; };
 		ACA55C87284E92DF003AFAFE /* SearchCats.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA55C86284E92DF003AFAFE /* SearchCats.swift */; };
 		ACA55C89284E9FF3003AFAFE /* FakeCatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA55C88284E9FF3003AFAFE /* FakeCatsService.swift */; };
+		ACC1CF0B284FE6B40005DD8A /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF0A284FE6B40005DD8A /* BreedsView.swift */; };
+		ACC1CF0D284FEA4E0005DD8A /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF0C284FEA4E0005DD8A /* BreedsViewModel.swift */; };
+		ACC1CF11284FEA850005DD8A /* BreedListDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF10284FEA850005DD8A /* BreedListDisplayItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,9 @@
 		ACA55C83284E9031003AFAFE /* CatsServiceReuqest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsServiceReuqest.swift; sourceTree = "<group>"; };
 		ACA55C86284E92DF003AFAFE /* SearchCats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCats.swift; sourceTree = "<group>"; };
 		ACA55C88284E9FF3003AFAFE /* FakeCatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeCatsService.swift; sourceTree = "<group>"; };
+		ACC1CF0A284FE6B40005DD8A /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
+		ACC1CF0C284FEA4E0005DD8A /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
+		ACC1CF10284FEA850005DD8A /* BreedListDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListDisplayItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,9 +209,9 @@
 		AC92FD8B284B73C600A4D576 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				ACC1CF08284FE4530005DD8A /* Random cats */,
+				ACC1CF09284FE6140005DD8A /* Breeds */,
+				ACC1CF08284FE4530005DD8A /* Random Cats */,
 				AC92FDA3284BC2FE00A4D576 /* UI Extensions */,
-				AC92FD83284B679A00A4D576 /* CatsListView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -267,11 +273,30 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		ACC1CF08284FE4530005DD8A /* Random cats */ = {
+		ACC1CF08284FE4530005DD8A /* Random Cats */ = {
 			isa = PBXGroup;
 			children = (
+				AC92FD83284B679A00A4D576 /* CatsListView */,
 			);
-			path = "Random cats";
+			path = "Random Cats";
+			sourceTree = "<group>";
+		};
+		ACC1CF09284FE6140005DD8A /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1CF0E284FEA640005DD8A /* Breeds List */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		ACC1CF0E284FEA640005DD8A /* Breeds List */ = {
+			isa = PBXGroup;
+			children = (
+				ACC1CF0A284FE6B40005DD8A /* BreedsView.swift */,
+				ACC1CF0C284FEA4E0005DD8A /* BreedsViewModel.swift */,
+				ACC1CF10284FEA850005DD8A /* BreedListDisplayItem.swift */,
+			);
+			path = "Breeds List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,7 +435,10 @@
 				AC92FD85284B67A900A4D576 /* CatsListViewModel.swift in Sources */,
 				AC92FD98284B814400A4D576 /* CatListDisplayItem.swift in Sources */,
 				ACA55C7D284E8C13003AFAFE /* CatsService.swift in Sources */,
+				ACC1CF11284FEA850005DD8A /* BreedListDisplayItem.swift in Sources */,
 				AC92FD9E284B85CA00A4D576 /* LoadedCatImage.swift in Sources */,
+				ACC1CF0B284FE6B40005DD8A /* BreedsView.swift in Sources */,
+				ACC1CF0D284FEA4E0005DD8A /* BreedsViewModel.swift in Sources */,
 				ACA55C87284E92DF003AFAFE /* SearchCats.swift in Sources */,
 				AC92FDA0284B861F00A4D576 /* LikeKoteekyImageLoader.swift in Sources */,
 				ACA55C82284E8EEA003AFAFE /* CatsServiceError.swift in Sources */,
