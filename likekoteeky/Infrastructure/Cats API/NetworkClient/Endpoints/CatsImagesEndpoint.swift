@@ -1,5 +1,5 @@
 //
-//  CatsServiceReuqest.swift
+//  CatsImagesEndpoint.swift
 //  likekoteeky
 //
 //  Created by Anton Aleksieiev on 06.06.2022.
@@ -7,17 +7,17 @@
 
 import Foundation
 
-enum CatsServiceRequest {
+enum CatsImagesEndpoint {
     static let baseURL = URL(string: kApiBaseUrl)!
     static let apiToken = kLikekoteekyApiToken
     
-    case searchImages(params: SearchCatsRequest)
+    case searchImages(params: SearchCatImagesRequest)
     
-    var urlRequest: URLRequest {
+    var urlRequest: CatsAPIUrlRequest {
         switch self {
         case .searchImages(let params):
             var baseQueryURL = URLComponents(
-                url: CatsServiceRequest.baseURL.appendingPathComponent("/images/search"),
+                url: CatsImagesEndpoint.baseURL.appendingPathComponent("/images/search"),
                 resolvingAgainstBaseURL: false
             )!
             baseQueryURL.queryItems = [
@@ -31,8 +31,8 @@ enum CatsServiceRequest {
                 cachePolicy: .reloadIgnoringLocalCacheData,
                 timeoutInterval: 10
                 )
-            request.addValue(CatsServiceRequest.apiToken, forHTTPHeaderField: "x-api-key")
-            return request
+            request.addValue(CatsImagesEndpoint.apiToken, forHTTPHeaderField: "x-api-key")
+            return CatsAPIUrlRequest(urlSessionRequest: request)
         }
     }
 }

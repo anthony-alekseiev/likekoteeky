@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SearchCatsRequest {
+struct SearchCatImagesRequest {
     enum Order: String {
         case random = "random"
         case asc = "asc"
@@ -27,9 +27,9 @@ struct SearchCatsRequest {
     let size: Size
 }
 
-typealias SearchCatsResponse = [SearchCatsResponseCat]
+typealias SearchCatImagesResponse = [SearchCatImagessResponseImage]
 
-struct SearchCatsResponseCat: Codable {
+struct SearchCatImagessResponseImage: Decodable {
     var id: String
     var url: URL
 }

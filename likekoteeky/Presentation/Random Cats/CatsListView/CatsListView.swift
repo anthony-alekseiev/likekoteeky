@@ -26,7 +26,7 @@ struct CatsListView: View {
 struct CatsListView_Previews: PreviewProvider {
     @State static var vm = CatsListViewModel(
         imageLoader: FakeImageLoader(images: []),
-        catsService: FakeCatsService(response: [])
+        catsService: FakeCatsImagesService(response: [])
     )
     static var previews: some View {
         CatsListView(viewModel: vm)

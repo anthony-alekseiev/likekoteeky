@@ -17,7 +17,6 @@ struct LikeKoteekyImageLoader: ImageLoader {
     func loadImages(for cats: [Cat]) -> AnyPublisher<LoadedCatImage, Never> {
         cats
             .publisher
-            .print("[LOAD IMAGES]")
             .flatMap {
                 loadImage(for: $0)
             }

@@ -10,18 +10,13 @@ import Combine
 import SwiftUI
 
 class BreedsViewModel: ObservableObject {
-    @Published var breeds: [BreedListDisplayItem] = [
-        BreedListDisplayItem(
-            id: "meow",
-            name: "Niceone",
-            description: "Very nice and cute little one!",
-            image: nil
-        ),
-        BreedListDisplayItem(
-            id: "hellokitty",
-            name: "Hello Kitty",
-            description: "Cheep, cheep! Hello Kitty looks so cute all dolled up as a baby chick. The fuzzy texture is super soft and cuddly.",
-            image: UIImage(named: "cat_placeholder")
-        )
-    ]
+//    private var breeds: []
+    @Published var breedItems: [BreedListDisplayItem] = []
+    
+    let imageLoader: ImageLoader
+    let breedsService: BreedsService
+    init(imageLoader: ImageLoader, breedsService: BreedsService) {
+        self.imageLoader = imageLoader
+        self.breedsService = breedsService
+    }
 }

@@ -12,13 +12,19 @@ struct likekoteekyApp: App {
     
     var body: some Scene {
         let imageLoader: ImageLoader = LikeKoteekyImageLoader()
-        let catsService: CatsService = CatsServiceClient()
+        
+        let apiClient = CatsAPIClient()
+        let catsImagesService: CatsImagesService = apiClient
+        let breedsService: BreedsService = apiClient
+        
         let catListViewModel = CatsListViewModel(
             imageLoader: imageLoader,
-            catsService: catsService
+            catsService: catsImagesService
         )
-        
-        let breedsViewModel = BreedsViewModel()
+        let breedsViewModel = BreedsViewModel(
+            imageLoader: imageLoader,
+            breedsService: breedsService
+        )
         
         WindowGroup {
 //            CatsListView(

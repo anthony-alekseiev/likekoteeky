@@ -11,7 +11,7 @@ struct BreedsView: View {
     @ObservedObject var viewModel: BreedsViewModel
     
     var body: some View {
-        List(viewModel.breeds) { breed in
+        List(viewModel.breedItems) { breed in
             HStack {
                 if breed.image != nil {
                     Image(uiImage: breed.image!)
@@ -41,7 +41,10 @@ struct BreedsView: View {
 }
 
 struct BreedsView_Previews: PreviewProvider {
-    @State static var viewModel = BreedsViewModel()
+    @State static var viewModel = BreedsViewModel(
+        imageLoader: FakeImageLoader(images: []),
+        breedsService: FakeBreedsService(response: [])
+    )
     
     static var previews: some View {
         BreedsView(viewModel: viewModel)

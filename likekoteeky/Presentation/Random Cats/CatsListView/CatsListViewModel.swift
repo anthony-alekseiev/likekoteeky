@@ -16,8 +16,8 @@ class CatsListViewModel: ObservableObject {
     private var subscriptions = [AnyCancellable]()
     
     let imageLoader: ImageLoader
-    let catsService: CatsService
-    init(imageLoader: ImageLoader, catsService: CatsService) {
+    let catsService: CatsImagesService
+    init(imageLoader: ImageLoader, catsService: CatsImagesService) {
         self.imageLoader = imageLoader
         self.catsService = catsService
     }
@@ -44,13 +44,13 @@ class CatsListViewModel: ObservableObject {
     }
     
     func fetchCats() {
-        let request = SearchCatsRequest(
+        let request = SearchCatImagesRequest(
             limit: 10,
             page: 0,
             order: .desc,
             size: .med
         )
-        catsService.getCats(request: request)
+        catsService.getCatImages(request: request)
             .map {
                 $0.map { Cat(id: $0.id, url: $0.url) }
             }

@@ -1,19 +1,20 @@
 //
-//  CatsServiceClient.swift
+//  CatsAPIClient.swift
 //  likekoteeky
 //
-//  Created by Anton Aleksieiev on 06.06.2022.
+//  Created by Anton Aleksieiev on 07.06.2022.
 //
 
 import Foundation
 import Combine
 
-class CatsServiceClient {
+
+class CatsAPIClient {
     let apiSession = URLSession.shared
     
-    func wrappedRequest<Response: Decodable>(urlRequest: URLRequest) -> AnyPublisher<Response, CatsServiceError> {
+    func wrappedRequest<Response: Decodable>(urlRequest: CatsAPIUrlRequest) -> AnyPublisher<Response, CatsServiceError> {
         return apiSession
-            .dataTaskPublisher(for: urlRequest)
+            .dataTaskPublisher(for: urlRequest.urlSessionRequest)
             .map(\.data)
             .decode(type: Response.self, decoder: JSONDecoder())
             .mapError { error -> CatsServiceError in
@@ -31,12 +32,5 @@ class CatsServiceClient {
                 return .unknownError(msg: error.localizedDescription)
             }
             .eraseToAnyPublisher()
-    }
-}
-
-extension CatsServiceClient: CatsService {
-    func getCats(request: SearchCatsRequest) -> AnyPublisher<SearchCatsResponse, CatsServiceError> {
-        let request = CatsServiceRequest.searchImages(params: request).urlRequest
-        return wrappedRequest(urlRequest: request)
     }
 }
