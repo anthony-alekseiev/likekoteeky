@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+typealias BreedDetailsProviderCallback = (_ breedItem: BreedDisplayItem) -> BreedDetailsView
+
 struct BreedsView: View {
     @ObservedObject var viewModel: BreedsViewModel
     let breedDetailsProvider: BreedDetailsProviderCallback!

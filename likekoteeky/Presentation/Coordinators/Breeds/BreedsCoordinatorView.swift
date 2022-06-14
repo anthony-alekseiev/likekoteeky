@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-typealias BreedDetailsProviderCallback = (_ breedItem: BreedDisplayItem) -> BreedDetailsView
 typealias BreedListProviderCallback = () -> BreedsView
 
 struct BreedsCoordinatorView: View {
@@ -16,11 +15,7 @@ struct BreedsCoordinatorView: View {
     
     var body: some View {
         NavigationView {
-            if breedsListProvider != nil {
-                breedsListProvider!()
-            } else {
-                EmptyView()
-            }
+            breedsListProvider()
         }
     }
 }
@@ -35,6 +30,6 @@ struct BreedsCoordinatorView_Previews: PreviewProvider {
     )
     
     static var previews: some View {
-        BreedsCoordinatorView(viewModel: viewModel)
+        EmptyView()
     }
 }
