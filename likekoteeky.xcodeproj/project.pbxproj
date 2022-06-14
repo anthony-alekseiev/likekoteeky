@@ -34,6 +34,7 @@
 		ACAB10972858EAAF005A112F /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB10962858EAAF005A112F /* Breed.swift */; };
 		ACAB10992858EBD5005A112F /* LoadedBreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB10982858EBD5005A112F /* LoadedBreedImage.swift */; };
 		ACAB109B2858EC73005A112F /* ImageLoadingSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB109A2858EC73005A112F /* ImageLoadingSource.swift */; };
+		ACAB109E2858F269005A112F /* BreedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB109D2858F269005A112F /* BreedDetailsView.swift */; };
 		ACC1CF0B284FE6B40005DD8A /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF0A284FE6B40005DD8A /* BreedsView.swift */; };
 		ACC1CF0D284FEA4E0005DD8A /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF0C284FEA4E0005DD8A /* BreedsViewModel.swift */; };
 		ACC1CF11284FEA850005DD8A /* BreedListDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF10284FEA850005DD8A /* BreedListDisplayItem.swift */; };
@@ -94,6 +95,7 @@
 		ACAB10962858EAAF005A112F /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		ACAB10982858EBD5005A112F /* LoadedBreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedBreedImage.swift; sourceTree = "<group>"; };
 		ACAB109A2858EC73005A112F /* ImageLoadingSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingSource.swift; sourceTree = "<group>"; };
+		ACAB109D2858F269005A112F /* BreedDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsView.swift; sourceTree = "<group>"; };
 		ACC1CF0A284FE6B40005DD8A /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
 		ACC1CF0C284FEA4E0005DD8A /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
 		ACC1CF10284FEA850005DD8A /* BreedListDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListDisplayItem.swift; sourceTree = "<group>"; };
@@ -296,6 +298,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		ACAB109C2858F154005A112F /* Breed details */ = {
+			isa = PBXGroup;
+			children = (
+				ACAB109D2858F269005A112F /* BreedDetailsView.swift */,
+			);
+			path = "Breed details";
+			sourceTree = "<group>";
+		};
 		ACC1CF08284FE4530005DD8A /* Random Cats */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +317,7 @@
 		ACC1CF09284FE6140005DD8A /* Breeds */ = {
 			isa = PBXGroup;
 			children = (
+				ACAB109C2858F154005A112F /* Breed details */,
 				ACC1CF0E284FEA640005DD8A /* Breeds List */,
 			);
 			path = Breeds;
@@ -497,6 +508,7 @@
 				AC92FD85284B67A900A4D576 /* CatsListViewModel.swift in Sources */,
 				AC92FD98284B814400A4D576 /* CatListDisplayItem.swift in Sources */,
 				ACAB109B2858EC73005A112F /* ImageLoadingSource.swift in Sources */,
+				ACAB109E2858F269005A112F /* BreedDetailsView.swift in Sources */,
 				ACA55C7D284E8C13003AFAFE /* CatsImagesService.swift in Sources */,
 				ACC1CF11284FEA850005DD8A /* BreedListDisplayItem.swift in Sources */,
 				AC92FD9E284B85CA00A4D576 /* ImageLoadingResult.swift in Sources */,
