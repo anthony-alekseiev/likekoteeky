@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoadedCatImage {
+struct ImageLoadingResult {
     var image: UIImage?
-    var cat: Cat
+    var source: ImageLoadingSource
 }

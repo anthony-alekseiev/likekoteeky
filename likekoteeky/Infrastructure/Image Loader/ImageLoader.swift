@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol ImageLoader {
-    func loadImages(for cats: [Cat]) -> AnyPublisher<LoadedCatImage, Never>
+    func loadImages(for source: [ImageLoadingSource]) -> AnyPublisher<ImageLoadingResult, Never>
 }

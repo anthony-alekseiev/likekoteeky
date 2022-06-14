@@ -34,8 +34,8 @@ class CatsListViewModel: ObservableObject {
             }).store(in: &subscriptions)
     }
     
-    func reloadCatItems(with newImage: LoadedCatImage) {
-        let catItem = catItems.first(where: { $0.id == newImage.cat.id })
+    func reloadCatItems(with newImage: ImageLoadingResult) {
+        let catItem = catItems.first(where: { $0.id == newImage.source.id })
         if let img = newImage.image {
             catItem?.image = img
             self.objectWillChange.send()

@@ -9,14 +9,14 @@ import Foundation
 import Combine
 
 struct FakeImageLoader: ImageLoader {
-    let publisher = PassthroughSubject<LoadedCatImage, Never>()
-    var images = [LoadedCatImage]()
+    let publisher = PassthroughSubject<ImageLoadingResult, Never>()
+    var images = [ImageLoadingResult]()
     
-    init(images: [LoadedCatImage]) {
+    init(images: [ImageLoadingResult]) {
         self.images = images
     }
     
-    func loadImages(for cats: [Cat]) -> AnyPublisher<LoadedCatImage, Never> {
+    func loadImages(for source: [ImageLoadingSource]) -> AnyPublisher<ImageLoadingResult, Never> {
         images.forEach { publisher.send($0) }
         return publisher.eraseToAnyPublisher()
     }

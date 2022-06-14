@@ -14,8 +14,8 @@ struct LikeKoteekyImageLoader: ImageLoader {
         
     }
     
-    func loadImages(for cats: [Cat]) -> AnyPublisher<LoadedCatImage, Never> {
-        cats
+    func loadImages(for source: [ImageLoadingSource]) -> AnyPublisher<ImageLoadingResult, Never> {
+        source
             .publisher
             .flatMap {
                 loadImage(for: $0)
@@ -24,14 +24,14 @@ struct LikeKoteekyImageLoader: ImageLoader {
         
     }
     
-    private func loadImage(for cat: Cat) -> AnyPublisher<LoadedCatImage, Never> {
+    private func loadImage(for source: ImageLoadingSource) -> AnyPublisher<ImageLoadingResult, Never> {
         URLSession.shared
-            .dataTaskPublisher(for: cat.url)
+            .dataTaskPublisher(for: source.imageUrl)
             .replaceError(with: (Data(), URLResponse.init()))
             .map {
-                LoadedCatImage(
+                ImageLoadingResult(
                     image: UIImage(data: $0.data),
-                    cat: cat
+                    source: source
                 )
             }
             .eraseToAnyPublisher()
