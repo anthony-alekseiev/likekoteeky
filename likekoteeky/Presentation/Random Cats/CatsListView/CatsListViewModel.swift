@@ -44,6 +44,7 @@ class CatsListViewModel: ObservableObject {
     }
     
     func fetchCats() {
+        guard cats.isEmpty else { return }
         let request = SearchCatImagesRequest(
             limit: 10,
             page: 0,

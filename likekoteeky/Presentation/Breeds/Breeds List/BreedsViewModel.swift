@@ -11,7 +11,7 @@ import SwiftUI
 
 class BreedsViewModel: ObservableObject {
     private var breeds: [Breed] = []
-    @Published var breedItems: [BreedListDisplayItem] = []
+    @Published var breedItems: [BreedDisplayItem] = []
     private var subscriptions = [AnyCancellable]()
     
     let imageLoader: ImageLoader
@@ -24,14 +24,13 @@ class BreedsViewModel: ObservableObject {
     private func reloadBreeds(with newBreeds: [Breed]) {
         self.breeds = newBreeds
         breedItems = newBreeds.map {
-            BreedListDisplayItem(
+            BreedDisplayItem(
                 id: $0.id,
                 name: $0.name,
                 description: $0.description
             )
         }
         imageLoader.loadImages(for: newBreeds)
-            .print("[BREEDS]")
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: { [weak self] image in
                 self?.reloadBreeds(with: image)
@@ -39,7 +38,7 @@ class BreedsViewModel: ObservableObject {
     }
     
     func reloadBreeds(with newImage: ImageLoadingResult) {
-        var breedItem = breedItems.first(where: { $0.id == newImage.source.id })
+        let breedItem = breedItems.first(where: { $0.id == newImage.source.id })
         if let img = newImage.image {
             breedItem?.image = img
             self.objectWillChange.send()
@@ -48,6 +47,7 @@ class BreedsViewModel: ObservableObject {
     }
     
     func fetchBreeds() {
+        guard breeds.isEmpty else { return }
         let request = BreedsListRequest(limit: 10, page: 0)
         breedsService.getbreeds(request: request)
             .map {

@@ -10,27 +10,15 @@ import SwiftUI
 @main
 struct likekoteekyApp: App {
     
+    let diContainer = DIContainer()
+    
     var body: some Scene {
-        let imageLoader: ImageLoader = LikeKoteekyImageLoader()
-        
-        let apiClient = CatsAPIClient()
-        let catsImagesService: CatsImagesService = apiClient
-        let breedsService: BreedsService = apiClient
-        
-        let catListViewModel = CatsListViewModel(
-            imageLoader: imageLoader,
-            catsService: catsImagesService
-        )
-        let breedsViewModel = BreedsViewModel(
-            imageLoader: imageLoader,
-            breedsService: breedsService
-        )
         
         WindowGroup {
-//            CatsListView(
-//                viewModel: catListViewModel
-//            )
-            BreedsView(viewModel: breedsViewModel)
+            MenuCoordinatorView(
+                breedsView: diContainer.breedsCoordinator,
+                catListView: diContainer.catListView
+            )
         }
     }
 }

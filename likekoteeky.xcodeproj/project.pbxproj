@@ -35,6 +35,12 @@
 		ACAB10992858EBD5005A112F /* LoadedBreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB10982858EBD5005A112F /* LoadedBreedImage.swift */; };
 		ACAB109B2858EC73005A112F /* ImageLoadingSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB109A2858EC73005A112F /* ImageLoadingSource.swift */; };
 		ACAB109E2858F269005A112F /* BreedDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB109D2858F269005A112F /* BreedDetailsView.swift */; };
+		ACAB10A02858F7E6005A112F /* BreedDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB109F2858F7E6005A112F /* BreedDetailsViewModel.swift */; };
+		ACAB10A22858F87A005A112F /* BreedDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB10A12858F87A005A112F /* BreedDisplayItem.swift */; };
+		ACAB10A628590681005A112F /* BreedsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB10A528590681005A112F /* BreedsCoordinatorView.swift */; };
+		ACAB10A8285906DB005A112F /* BreedsCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB10A7285906DB005A112F /* BreedsCoordinatorViewModel.swift */; };
+		ACAB10AB285929AC005A112F /* MenuCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB10AA285929AC005A112F /* MenuCoordinatorView.swift */; };
+		ACAB10AE28592B90005A112F /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAB10AD28592B90005A112F /* DIContainer.swift */; };
 		ACC1CF0B284FE6B40005DD8A /* BreedsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF0A284FE6B40005DD8A /* BreedsView.swift */; };
 		ACC1CF0D284FEA4E0005DD8A /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF0C284FEA4E0005DD8A /* BreedsViewModel.swift */; };
 		ACC1CF11284FEA850005DD8A /* BreedListDisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC1CF10284FEA850005DD8A /* BreedListDisplayItem.swift */; };
@@ -96,6 +102,12 @@
 		ACAB10982858EBD5005A112F /* LoadedBreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadedBreedImage.swift; sourceTree = "<group>"; };
 		ACAB109A2858EC73005A112F /* ImageLoadingSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingSource.swift; sourceTree = "<group>"; };
 		ACAB109D2858F269005A112F /* BreedDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsView.swift; sourceTree = "<group>"; };
+		ACAB109F2858F7E6005A112F /* BreedDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsViewModel.swift; sourceTree = "<group>"; };
+		ACAB10A12858F87A005A112F /* BreedDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDisplayItem.swift; sourceTree = "<group>"; };
+		ACAB10A528590681005A112F /* BreedsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCoordinatorView.swift; sourceTree = "<group>"; };
+		ACAB10A7285906DB005A112F /* BreedsCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		ACAB10AA285929AC005A112F /* MenuCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinatorView.swift; sourceTree = "<group>"; };
+		ACAB10AD28592B90005A112F /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		ACC1CF0A284FE6B40005DD8A /* BreedsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsView.swift; sourceTree = "<group>"; };
 		ACC1CF0C284FEA4E0005DD8A /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
 		ACC1CF10284FEA850005DD8A /* BreedListDisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListDisplayItem.swift; sourceTree = "<group>"; };
@@ -156,6 +168,7 @@
 		AC92FD56284B432200A4D576 /* likekoteeky */ = {
 			isa = PBXGroup;
 			children = (
+				ACAB10AC28592B6E005A112F /* DI */,
 				AC92FD81284B5B8B00A4D576 /* AppEnv.swift */,
 				AC92FD57284B432200A4D576 /* likekoteekyApp.swift */,
 				AC92FD8A284B738D00A4D576 /* Infrastructure */,
@@ -232,6 +245,7 @@
 		AC92FD8B284B73C600A4D576 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				ACAB10A328590313005A112F /* Coordinators */,
 				ACC1CF09284FE6140005DD8A /* Breeds */,
 				ACC1CF08284FE4530005DD8A /* Random Cats */,
 				AC92FDA3284BC2FE00A4D576 /* UI Extensions */,
@@ -302,8 +316,44 @@
 			isa = PBXGroup;
 			children = (
 				ACAB109D2858F269005A112F /* BreedDetailsView.swift */,
+				ACAB109F2858F7E6005A112F /* BreedDetailsViewModel.swift */,
+				ACAB10A12858F87A005A112F /* BreedDisplayItem.swift */,
 			);
 			path = "Breed details";
+			sourceTree = "<group>";
+		};
+		ACAB10A328590313005A112F /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				ACAB10A92859297C005A112F /* MenuCoordinator */,
+				ACAB10A42859066D005A112F /* Breeds */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		ACAB10A42859066D005A112F /* Breeds */ = {
+			isa = PBXGroup;
+			children = (
+				ACAB10A528590681005A112F /* BreedsCoordinatorView.swift */,
+				ACAB10A7285906DB005A112F /* BreedsCoordinatorViewModel.swift */,
+			);
+			path = Breeds;
+			sourceTree = "<group>";
+		};
+		ACAB10A92859297C005A112F /* MenuCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				ACAB10AA285929AC005A112F /* MenuCoordinatorView.swift */,
+			);
+			path = MenuCoordinator;
+			sourceTree = "<group>";
+		};
+		ACAB10AC28592B6E005A112F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				ACAB10AD28592B90005A112F /* DIContainer.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 		ACC1CF08284FE4530005DD8A /* Random Cats */ = {
@@ -517,11 +567,17 @@
 				ACA55C87284E92DF003AFAFE /* SearchCatImages.swift in Sources */,
 				ACC1CF21284FF3BD0005DD8A /* CatsAPIUrlRequest.swift in Sources */,
 				ACC1CF1B284FF1C60005DD8A /* BreedsEndpoint.swift in Sources */,
+				ACAB10A22858F87A005A112F /* BreedDisplayItem.swift in Sources */,
 				AC92FDA0284B861F00A4D576 /* LikeKoteekyImageLoader.swift in Sources */,
 				ACC1CF14284FEE020005DD8A /* CatsAPIClient.swift in Sources */,
 				ACA55C82284E8EEA003AFAFE /* CatsServiceError.swift in Sources */,
+				ACAB10AE28592B90005A112F /* DIContainer.swift in Sources */,
+				ACAB10A8285906DB005A112F /* BreedsCoordinatorViewModel.swift in Sources */,
+				ACAB10A02858F7E6005A112F /* BreedDetailsViewModel.swift in Sources */,
 				AC92FDA7284BC50C00A4D576 /* CardsStack.swift in Sources */,
 				ACA55C89284E9FF3003AFAFE /* FakeCatsImagesService.swift in Sources */,
+				ACAB10A628590681005A112F /* BreedsCoordinatorView.swift in Sources */,
+				ACAB10AB285929AC005A112F /* MenuCoordinatorView.swift in Sources */,
 				ACAB10972858EAAF005A112F /* Breed.swift in Sources */,
 				AC92FDA5284BC31000A4D576 /* View+Stacked.swift in Sources */,
 				ACC1CF23284FF4EA0005DD8A /* FakeBreedsService.swift in Sources */,
