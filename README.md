@@ -1,5 +1,6 @@
 # likekoteeky
 Experimenting with swift UI, combine using mvvm, coordinator &amp; di
+Cat api is used as a source - https://docs.thecatapi.com/
 
 In order to run the app you should add 2 constants somewhere in the app:
   1) kLikekoteekyApiToken - you can generate one using https://docs.thecatapi.com/authentication
